@@ -98,10 +98,7 @@
 
 ;;
 ;;  The clauses from the problem
-;;  XXX Add texts describing the relationships that are being
-;;      described, then translate to use the helper functions
-;;      from above to make the code directly mirroring the
-;;      sentences they model.
+;;
 (defun c1 (na co)
   "The englishman lives in the red house"
   (at-same-position-p 'english na 'red co))

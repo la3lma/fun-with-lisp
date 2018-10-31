@@ -2,6 +2,8 @@
 ;;; The 8 queens problem, just as a kata :-)
 ;;;
 
+;; XXX NOTE: THis thing makes _some_ correct solutions, not yet verified that it does all.
+
 
 (defun all-permutations (list)
   "Generate all permutations of the elements in a list"
@@ -88,7 +90,6 @@
 (defun rotation270 (candidate)
   (rotation180 (rotation90 candidate)))
 
-
 (defun mirror-diagonal2 (candidate)
  (rotation90 (mirror-diagonal1 (rotation-90 candidate))))
 
@@ -98,3 +99,6 @@
 (defun mirror-vertical (candidate)
   (rotation90 (mirror-horizontal (rotation-90 candidate))))
 
+;;
+;; Pretty printg chessboards
+;;
