@@ -1,4 +1,4 @@
-;;; 
+;;;
 ;;; The 8 queens problem, just as a kata :-)
 ;;;
 
@@ -102,3 +102,18 @@
 ;;
 ;; Pretty printg chessboards
 ;;
+
+(defun repeat-string (ch l)
+  (with-output-to-string (str)
+    (dotimes (i l)
+      (format str "~c" ch))))
+
+(defun pp (board &key (out *standard-output*))
+  "Pretty print chess boards for the 8 queens problem"
+
+  (format out "~%+--------+")
+  (dolist (piece board)
+    (let ((pre  (repeat-string #\ (- piece 0)))
+	  (post (repeat-string #\ (- 7 piece))))
+      (format out "~%|~a*~a|" pre post)))
+  (format out "~%+--------+"))

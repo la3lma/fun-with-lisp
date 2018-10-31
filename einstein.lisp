@@ -40,9 +40,9 @@
 	(animal-count 0)
 	(car-count 0))
 
-    
+
     (format out "~%===~%    Solutions~2%")
-    
+
     (dolist (co all-colors)
       (incf color-count)
       (dolist (dr all-drinks)
@@ -78,8 +78,8 @@
     (format out "~%   nation-count = ~d" nation-count)
     (format out "~%   animal-count = ~d" animal-count)
     (format out "~%      car-count = ~d" car-count)))
-    
-    
+
+
 ;;
 ;; Helper functions for expressing spatial relationships
 ;;
@@ -94,7 +94,7 @@
   (= (- (position key1 set1) (position key2 set2)) 1))
 
 (defun at-location-p (index item set)
-  (eq item (nth index set)))  
+  (eq item (nth index set)))
 
 ;;
 ;;  The clauses from the problem
@@ -167,7 +167,7 @@
    (c1 na co)
    (c14 na co)
    (c3 na dr)
-   (c5 co dr)       
+   (c5 co dr)
    (c2 na an)
    (c6 ca an)
    (c7 ca co)
@@ -176,7 +176,3 @@
    (c12 ca dr)
    (c13 ca na)
    (c15 ca dr)))
-
-
-
-
